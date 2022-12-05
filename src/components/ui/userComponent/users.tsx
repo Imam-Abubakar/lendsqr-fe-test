@@ -139,7 +139,7 @@ const Users = (props: usersComponentProps) => {
               <td key={user?.phoneNumber}>{user?.phoneNumber}</td>
               <td key={user?.createdAt}>May 15, 2020 10:00 AM</td>
               <td key={user?.accountBalance} className={`${TableStyle.userStatus}`}>
-                <span className={`${UserStyle.defaultUserStatus} ${props.iconClassName ? props.iconClassName : "Active"}`}>Activ</span>
+                <span className={`${UserStyle.defaultUserStatus} ${props.iconClassName ? props.iconClassName : "Active"}`}>Active</span>
               </td>
               <MoreButton handleClick={viewMore} />
               <MoreBtnContainer userID={user?.id} />
