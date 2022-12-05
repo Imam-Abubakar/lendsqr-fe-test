@@ -1,0 +1,51 @@
+@use "../../styles/sassStyles/variables" as variable;
+@use "../../styles/sassStyles/mixins" as mixin;
+
+.error{
+    &__container {
+        background: variable.$white;
+        height: 100vh;
+        @include mixin.flex($align: center, $justify: center);
+
+        @include mixin.media("XLdesktop") {
+            flex-direction: column;
+        }
+
+        @include mixin.media("LGdesktop") {
+            flex-direction: column;
+        }
+
+        @include mixin.media("desktop") {
+            flex-direction: column;
+        }
+
+        @include mixin.media("tab") {
+            flex-direction: column;
+        }
+    }
+
+    &__header{
+        font-size: 7.5em;
+        font-weight:900;
+        color: variable.$primary;
+    }
+    &__details{
+        font-size: 24px;
+        color: variable.$primary-alt;
+        margin-bottom: 20px;
+    }
+    &__btn{
+        background-color: variable.$primary;
+        color: variable.$white;
+        width: 40%;
+        height: 4.8rem;
+        padding: 1rem 2rem;
+        border-radius: 6px;
+        border: 0 !important;
+        outline: 0 !important;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}

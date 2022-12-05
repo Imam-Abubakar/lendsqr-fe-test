@@ -1,0 +1,115 @@
+@use "./mixins" as mixin;
+@use "./variables" as variable;
+
+
+//UTILITIES CLASSES
+
+.flex {
+  display: flex;
+}
+
+.h-45 {
+  height: 45% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.tertiary-color {
+  color: variable.$primary-alt;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+.show {
+  display: flex !important;
+}
+.hide{
+  display: none !important;
+}
+
+.my-s {
+  margin: 25px 0 4px !important;
+}
+
+.pt-m {
+  padding-top: 5rem !important;
+}
+
+.pb-s {
+  padding-bottom: 2rem !important;
+}
+
+.my-m {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.px-s {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+.mt-1 {
+  margin-top: 1rem !important;
+}
+.mt-2 {
+  margin-top: 2rem !important;
+}
+.mr-sIcon {
+  margin-right: 1rem !important;
+  @include mixin.media("tab"){
+    display: none;
+  }
+ 
+}
+
+.mb-1 {
+  margin-bottom: 1rem !important;
+}
+
+.pr-s {
+  padding-right: .3rem !important;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.col {
+  flex-direction: column !important;
+}
+
+
+.center {
+  @include mixin.flex($justify: center, $align: center)
+}
+
+.inactive {
+  color: variable.$secondary !important;
+  background: rgba($color: variable.$secondary, $alpha: 0.1) !important;
+}
+
+.pending {
+  color: variable.$warning !important;
+  background: rgba($color: variable.$warning, $alpha: 0.1) !important;
+}
+
+.activ {
+  color: variable.$success !important;
+  background: rgba($color: variable.$success, $alpha: 0.1) !important;
+}
+
+.blacklisted {
+  color: variable.$error !important;
+  background: rgba($color: variable.$error, $alpha: 0.1) !important;
+}

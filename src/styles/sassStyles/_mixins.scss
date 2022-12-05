@@ -1,0 +1,51 @@
+/*====== CONTENT (PER BREAKPOINT) =====*/
+@mixin media($breakpoint) {
+  @if ($breakpoint == "XLdesktop") {
+    @media (min-width: 160em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == "LGdesktop") {
+    @media (max-width: 90em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == "desktop") {
+    @media (max-width: 80em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == "tab") {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == "phone") {
+    @media (max-width: 26.625em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == "sm-phone") {
+    @media (max-width: 23.43em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == "xs-phone") {
+    @media (max-width: 20em) {
+      @content;
+    }
+  }
+}
+
+/*===== FLEX MIXIN =====*/
+
+@mixin flex($justify: flex-start, $align: flex-start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

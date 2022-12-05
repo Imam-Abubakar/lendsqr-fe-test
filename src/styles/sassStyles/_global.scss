@@ -1,0 +1,121 @@
+@use "./mixins" as mixin;
+@use "./variables" as variable;
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/font/AvenirNextLTPro-Regular.otf")
+    format("opentype");
+  font-weight:normal;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/font/AvenirNextLTPro-Bold.otf")
+    format("opentype");
+  font-weight: bold;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include mixin.media("XLdesktop") {
+    font-size: 75%;
+  }
+
+  @include mixin.media("desktop") {
+    font-size: 59.375%;
+  }
+
+  @include mixin.media("tab") {
+    font-size: 56.25%;
+  }
+
+  @include mixin.media("phone") {
+    font-size: 50%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-family: "Avenir Next", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+#file-upload-button {
+  display: none;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+/*===== Custom Scroll Bar =====*/
+::-webkit-scrollbar {
+  width: 5px;
+  max-height: 5px;
+
+  @include mixin.media("phone") {
+    width: 2px;
+    max-height: 2px;
+  }
+
+  @media (max-height: "600px") {
+    width: 3.5px;
+    max-height: 2px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: variable.$primary;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+t select .no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrapper {
+  @include mixin.media("XLdesktop") {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+}
